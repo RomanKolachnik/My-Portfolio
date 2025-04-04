@@ -32,10 +32,11 @@ I worked as a **Gameplay Programmer** on this project, responsible for core syst
 ## Features I Developed
 
 ### Chain Attack System
-<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
 
-<div style="flex: 1; min-width: 300px;">
-<pre><code class="language-csharp">
+<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+
+```csharp
 // Called when the player presses the attack button
 function AttemptAttack():
     if playerIsDead or inSpecialAttack or not isAllowedToAttack:
@@ -84,23 +85,17 @@ function ResetCombo():
     comboCount = 0
     canChain = false
     queueNextAttack = false
-</code></pre>
-</div>
-
-<div style="flex: 1; min-width: 300px;">
-  <img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-  <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
-</div>
-
-</div>
+```
 
 The chain attack system allows players to execute combo attacks by timing button presses during specific animation windows. If the attack is input early, it queues until chaining is allowed. The system ensures responsive combat while preventing unintended inputs, using internal flags and timing buffers. Animation events control the chain window and reset logic after the combo ends. 
 
-### Local Multiplayer Input
-<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
+---
 
-<div style="flex: 1; min-width: 300px;">
+### Local Multiplayer Input
+<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
 In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unity UI system built to overcome the limitations of multiple players interacting with a single canvas.
+<br><br>
 
 - Players join in and are each assigned a UISelector — a floating cursor tied to their PlayerInput
 - These selectors allow players to navigate independently across the character selection screen
@@ -108,19 +103,64 @@ In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unit
 - Because Unity's native UI systems struggle with differentiating multiple players on the same canvas, all navigation, submission, and cancel events are manually coded
 - Each player’s inputs are routed to their selector, which sends feedback to the menu and updates visuals dynamically (e.g., color, shape, locked-in state)
 - The system supports joining, backing out, and tutorial prompting, all fully synced across multiple players
-</div>
-
-<div style="flex: 1; min-width: 300px;">
-  <img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-  <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
-</div>
-</div>
-
 ---
 
 ### AI Personalities
-![Creature AI](assets/goofy-lil-guys/creature-ai.gif)  
-Wild creatures have different personalities (aggressive, cautious, curious) using a lightweight FSM and steering behaviors to avoid obstacles, engage in combat, or retreat.
+<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+In Goofy Lil Guys, I built a personality-driven AI behavior system for the “wild” creatures in the world. These AI-controlled Lil Guys make decisions based on randomly rolled traits (like timidness, intelligence, and charisma) that govern how they interact with players and the environment.
+<br><br>
+
+- AI can wander, chase, attack, flee, return home, or enter a dead state
+- Every wild Lil Guy is assigned a unique personality profile when spawned
+- Behavior dynamically shifts based on hostility level, distance to the player, and their current health
+- A finite state machine (FSM) controls AI state transitions, while internal timers and spatial logic govern movement, prediction, and cooldowns
+- The system scales elegantly across different archetypes (Strength, Speed, Defense) and supports both standard and legendary Lil Guys
+<br><br>
+
+Below is a table of each personality trait and what it does:
+| Trait        | What It Affects |
+|--------------|-----------------|
+| Hostility    | Affects hostile behaviours such as attacking and chasing. Higher hostility can cause the enemy to their special attacks when in range |
+| Timidness    | Affects how likely the wild Lil Guy is to flee from battle when at low health. Higher timidness values means a higher health cap for the wild Lil Guy to decide fighting isn't worth it, and will try to flee instead. |
+| Intelligence | Affects how far ahead wild Lil Guys can predict player movements during chasing. Higher intelligence factors cause the Lil Guy to try and veer in front of the player's escape path, cutting them off. |
+| Charisma     | Decides whether their hostility can spread to nearby wild Lil Guys. The charisma factor also increases this aggro radius the higher the charisma modifier is. |
+Each trait is rolled between 0 and 10, with real-time behavioural changes tied to thresholds (ex. timid > 5 can flee, charisma > 5 will aggro others)
+
+Below are pseudocode examples of how these traits affect decision making:
+```csharp
+// Main decision-making function
+function UpdateAI():
+    if health <= 0:
+        ChangeState(Dead)
+    else if timeAwayFromHome >= maxTime:
+        ChangeState(ReturnHome)
+    else if health < lowHealthThreshold and timid > 5:
+        ChangeState(Flee)
+    else if hostility > 3 and distanceToPlayer <= attackRange:
+        ChangeState(Attack)
+    else if hostility > 3 and distanceToPlayer <= chaseRange:
+        ChangeState(Chase)
+    else if isCatchable and time >= nextWanderTime:
+        ChangeState(Wander)
+    else:
+        ChangeState(Idle)
+
+// Chase logic affected by intelligence
+function PredictPlayerPosition():
+    if playerIsStationary:
+        return playerPosition
+    else if AI is behind player:
+        return playerPosition + (playerDirection * speed * thinkSpeed)
+    else:
+        return playerPosition
+
+// How charisma aggros wild lil guys in range
+function AggroNearbyLilGuys():
+    for each lilGuy in aggroRadius:
+        if lilGuy is wild:
+            lilGuy.IncreaseHostility(lerp(0, 2, charisma / 10))
+```
 
 ---
 
