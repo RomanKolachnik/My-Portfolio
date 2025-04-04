@@ -5,7 +5,7 @@ title: Goofy Lil Guys
 
 # Goofy Lil Guys
 
-> *2.5D Creature Collector • Local Multiplayer • Team of 10 • Released on Steam*
+> *2.5D Creature Collector • Local Multiplayer • Team Size: ~10 • Released on Steam*
 
 ![Banner](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3565690/2810b94b751e7ecebb318644b9b0e020a3dfccf7/header.jpg?t=1742702968)
 
