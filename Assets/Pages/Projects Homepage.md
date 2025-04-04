@@ -40,6 +40,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 - Assisted with player collider adjustments for platforming precision  
 
 [Play on Itch.io](https://steveohbyte.itch.io/house-of-cards)
+
 ---
 
 ## [Echoes of Continuity](./echoes-of-continuity.md)
