@@ -102,17 +102,12 @@ The chain attack system allows players to execute combo attacks by timing button
 <div style="flex: 1; min-width: 300px;">
 In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unity UI system built to overcome the limitations of multiple players interacting with a single canvas.
 
-Players join in and are each assigned a UISelector — a floating cursor tied to their PlayerInput
-
-These selectors allow players to navigate independently across the character selection screen
-
-The screen is composed of three character cards, each with unique starters
-
-Because Unity's native UI systems struggle with differentiating multiple players on the same canvas, all navigation, submission, and cancel events are manually coded
-
-Each player’s inputs are routed to their selector, which sends feedback to the menu and updates visuals dynamically (e.g., color, shape, locked-in state)
-
-The system supports joining, backing out, and tutorial prompting, all fully synced across multiple players
+- Players join in and are each assigned a UISelector — a floating cursor tied to their PlayerInput
+- These selectors allow players to navigate independently across the character selection screen
+- The screen is composed of three character cards, each with unique starters
+- Because Unity's native UI systems struggle with differentiating multiple players on the same canvas, all navigation, submission, and cancel events are manually coded
+- Each player’s inputs are routed to their selector, which sends feedback to the menu and updates visuals dynamically (e.g., color, shape, locked-in state)
+- The system supports joining, backing out, and tutorial prompting, all fully synced across multiple players
 </div>
 
 <div style="flex: 1; min-width: 300px;">
