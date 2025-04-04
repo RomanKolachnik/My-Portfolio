@@ -7,13 +7,13 @@ title: Goofy Lil Guys
 
 > *2.5D Creature Collector • Local Multiplayer • Team of 10 • Released on Steam*
 
-![Banner](assets/goofy-lil-guys/banner.png) <!-- replace with your actual path -->
+![Banner](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3565690/2810b94b751e7ecebb318644b9b0e020a3dfccf7/header.jpg?t=1742702968)
 
 ---
 
 ## Trailer / Gameplay Demo
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://video.fastly.steamstatic.com/store_trailers/257116853/movie480_vp9.webm?t=1742494208" frameborder="0" allowfullscreen></iframe>
 
 ---
 
