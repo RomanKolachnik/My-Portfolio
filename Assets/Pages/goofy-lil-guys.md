@@ -36,9 +36,7 @@ I worked as a **Gameplay Programmer** on this project, responsible for core syst
 
   <div style="flex: 1; min-width: 300px;">
     <pre><code class="language-csharp">
-/// <summary>
 /// Called by PlayerController.cs when the player presses attack
-/// </summary>
 public void AttemptAttack()
 {
 	if (IsInSpecialAttack || isDead || ((playerOwner != null) && !isAttacking)) return;
@@ -55,9 +53,7 @@ public void AttemptAttack()
 	}
 }
 
-/// <summary>
 /// Animation Event: Called at the right frame to allow chaining.
-/// </summary>
 public void EnableChainAttack()
 {
 	canChainAttack = true;
@@ -81,10 +77,7 @@ public float GetTotalComboTime()
 	return (attackAnimTime * maxCombo) + 0.1f;
 }
 
-
-/// <summary>
 /// Executes the attack only if allowed by animation timing.
-/// </summary>
 private void PerformAttack()
 {
 	currentComboCount++;
@@ -103,9 +96,7 @@ private void PerformAttack()
 	}
 }
 
-/// <summary>
 /// Animation Event: Called near the end of animation to check for a combo.
-/// </summary>
 public void CheckCombo()
 {
 	if (canChainAttack && attackQueued && currentComboCount < maxCombo && isAttacking)
