@@ -51,11 +51,4 @@ To help designers speed up level-building, I created tools to:
 
 ---
 
-## 🌐 Links
-
-- 🔗 [Steam Page](https://store.steampowered.com/app/3565690/Goofy_Lil_Guys/)
-- 🔗 [Itch.io Listing](https://romanxrt.itch.io/goofy-lil-guys)
-- 🔗 [GitHub Repo](https://github.com/your-repo-name)
-
----
 
