@@ -219,6 +219,9 @@ This tool dynamically builds polygon-based 3D mesh colliders for irregular or cu
 - Includes in-editor Gizmos for live visual debugging of the collider structure
 - Handles fan triangulation, side wall extrusion, and accurate physics collision setup
 
+<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+
 ---
 
 
