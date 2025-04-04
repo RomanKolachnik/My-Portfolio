@@ -10,7 +10,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 ---
 
 ## Goofy Lil Guys
-**2.5D Creature Collector | Local Multiplayer | Team Size: 10**
+**2.5D Creature Collector | Local Multiplayer | Team Size: ~10**
 
 - Implemented local multiplayer input using Unity's Input System
 - Developed unique combat mechanics for 9 playable creatures
@@ -22,7 +22,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 ---
 
 ## High Tech Havoc
-**3D Arena Shooter | Fast-paced Local Multiplayer | Synergistic Power-Ups | Team Size: 10**
+**3D Arena Shooter | Fast-paced Local Multiplayer | Synergistic Power-Ups | Team Size: ~10**
 
 - Connected controller inputs to specific player bodies
 - Built modular power-up framework with stacking and synergy logic
@@ -33,7 +33,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 ---
 
 ## House of Cards
-**2D Puzzle Platformer | Card Mechanics + Grapple | Team Size: 10**
+**2D Puzzle Platformer | Card Mechanics + Grapple | Team Size: ~10**
 
 - Designed modular card system with power-ups and activation effects
 - Implemented grapple physics, state-switcher movement, and pivot-based puzzles
