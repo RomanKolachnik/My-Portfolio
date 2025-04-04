@@ -37,4 +37,6 @@ Passionate about responsive game mechanics, modular design, and player-centric e
 ### [Echoes of Continuity](https://romanxrt.itch.io/echoes-of-continuity)
 *2D Roguelike Dungeon-Crawler | Procedural | Combat Scaling| Solo-Developed*
 
-- Designed grapple physics and movement switching systems
+- Built a modular item system with stat-based effects and activation logic
+- Procedural dungeon generation with rulesets for structure placement
+- Developed scaling difficulty over time and enemy FSMs for melee/ranged combat  
