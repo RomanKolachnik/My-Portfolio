@@ -11,9 +11,8 @@ title: Goofy Lil Guys
 
 ---
 
-## Trailer / Gameplay Demo
-
-<iframe width="100%" height="400" src="https://video.fastly.steamstatic.com/store_trailers/257116853/movie480_vp9.webm?t=1742494208" frameborder="0" allowfullscreen></iframe>
+## Trailer
+<iframe width="100%" height="400" src="https://www.youtube.com/watch?v=C9Nxyr-BCgM" frameborder="0" allowfullscreen></iframe>
 
 ---
 
