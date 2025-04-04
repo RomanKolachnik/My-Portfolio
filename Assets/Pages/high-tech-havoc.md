@@ -13,7 +13,7 @@ title: High-Tech Havoc
 
 ## Trailer / Gameplay Demo
 
-<iframe width="347" height="195" src="https://www.youtube.com/embed/IQU4GTxazKo" title="High-Tech Havoc Gameplay Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/IQU4GTxazKo" frameborder="0" allowfullscreen></iframe>
 
 ---
 
@@ -28,18 +28,18 @@ I worked as a **Gameplay Programmer** on High-Tech Havoc, with responsibilities 
 
 ---
 
-## ⚙Features I Developed
+## Features I Developed
 
 ### Local Multiplayer Input Handling
 
 ---
 
-### ⚡ Modular Power-Up Synergy System
+### Modular Power-Up Synergy System
 
 
 ---
 
-### 🌈 Stage Lighting Event Triggers
+### Stage Lighting Event Triggers
 
 
 ---
