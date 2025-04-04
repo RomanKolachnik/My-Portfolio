@@ -50,7 +50,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 - Procedural dungeon generation with rulesets for structure placement
 - Developed scaling difficulty over time and enemy FSMs for melee/ranged combat  
 [Play on Itch.io](https://romanxrt.itch.io/echoes-of-continuity)  
-[Project Page](./roguelike.md)
+[Project Page](./echoes-of-continuity.md)
 
 ---
 
