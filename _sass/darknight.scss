@@ -397,6 +397,25 @@ div.gallery img {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #header nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #header nav ul li a {
+    width: 80%;
+    padding: 12px;
+  }
+}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
