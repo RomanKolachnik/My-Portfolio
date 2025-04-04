@@ -39,7 +39,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 - Implemented grapple physics, state-switcher movement, and pivot-based puzzles
 - Assisted with player collider adjustments for platforming precision  
 [Play on Itch.io](https://steveohbyte.itch.io/house-of-cards)  
-[Project Page](./house_of_cards.md)
+[Project Page](./house-of-cards.md)
 
 ---
 
