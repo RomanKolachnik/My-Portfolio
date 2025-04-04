@@ -35,6 +35,6 @@ Passionate about responsive game mechanics, modular design, and player-centric e
 ---
 
 ### [Echoes of Continuity](https://romanxrt.itch.io/echoes-of-continuity)
-*2D Puzzle Platformer | Grapple + Card Mechanics | Team Size: 10*
+*2D Roguelike Dungeon-Crawler | Procedural | Combat Scaling| Solo-Developed*
 
 - Designed grapple physics and movement switching systems
