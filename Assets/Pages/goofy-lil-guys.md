@@ -84,11 +84,14 @@ function ResetCombo():
     comboCount = 0
     canChain = false
     queueNextAttack = false
+</code></pre>
+</div>
 
 <div style="flex: 1; min-width: 300px;">
   <img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
   <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
 </div>
+
 </div>
 
 The chain attack system allows players to execute combo attacks by timing button presses during specific animation windows. If the attack is input early, it queues until chaining is allowed. The system ensures responsive combat while preventing unintended inputs, using internal flags and timing buffers. Animation events control the chain window and reset logic after the combo ends. 
