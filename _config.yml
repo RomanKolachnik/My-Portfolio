@@ -1,3 +1,6 @@
 title: Xavier Triska
 description: C# Gameplay Programmer
 theme: jekyll-theme-midnight
+markdown: kramdown
+highlighter: rouge
+
