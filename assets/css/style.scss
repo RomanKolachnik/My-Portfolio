@@ -19,11 +19,14 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  background-color: #444;
-  color: #fff;
+  background-color: #444 !important; /* overrides anything weird */
+  color: #fff !important;
   border-radius: 6px;
   transition: background-color 0.3s ease;
+  box-shadow: none;
+  border: none;
 }
+
 
 .nav-links li a:hover {
   background-color: #666;
