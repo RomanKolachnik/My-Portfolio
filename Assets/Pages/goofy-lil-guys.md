@@ -11,11 +11,6 @@ title: Goofy Lil Guys
 
 ---
 
-## Trailer
-<iframe width="100%" height="400" src="https://www.youtube.com/watch?v=C9Nxyr-BCgM" frameborder="0" allowfullscreen></iframe>
-
----
-
 ## My Role
 
 I worked as a **Gameplay Programmer** on this project, responsible for core systems including:
