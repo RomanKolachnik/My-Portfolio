@@ -32,98 +32,91 @@ I worked as a **Gameplay Programmer** on this project, responsible for core syst
 ## Features I Developed
 
 ### Chain Attack System
-```csharp
-/// Called by PlayerController.cs when the player presses attack
-public void AttemptAttack()
-{
-	if (IsInSpecialAttack || isDead || ((playerOwner != null) && !isAttacking)) return;
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
 
-	// If first attack in the combo, trigger immediately
-	if (currentComboCount == 0 && Time.time - lastAttackTime > comboBufferTime)
-	{
-		PerformAttack();
-	}
-	else if (currentComboCount > 0)
-	{
-		// Otherwise, queue attack to execute when animation allows it
-		attackQueued = true;
-	}
-}
+<div style="flex: 1; min-width: 300px;">
+<pre><code class="language-csharp">
+// Called when the player presses the attack button
+function AttemptAttack():
+    if playerIsDead or inSpecialAttack or not isAllowedToAttack:
+        return
 
-/// Animation Event: Called at the right frame to allow chaining.
-public void EnableChainAttack()
-{
-	canChainAttack = true;
+    if comboCount == 0 and timeSinceLastAttack > comboBufferTime:
+        PerformAttack()
+    else if comboCount > 0:
+        queueNextAttack = true
 
-	// If attack is queued (player pressed attack within the window), continue the combo
-	if (attackQueued && currentComboCount < maxCombo && isAttacking)
-	{
-		attackQueued = false; // Clear the queue since we're attacking now
-		PerformAttack();
-	}
-}
 
-public float GetTotalComboTime()
-{
-	if (anim == null) return 0.5f; // Default safety buffer
+// Triggered mid-animation (at chain window) to allow chaining
+function EnableChainAttack():
+    canChain = true
 
-	// Get the length of the attack animation
-	float attackAnimTime = anim.GetCurrentAnimatorStateInfo(0).length;
+    if queueNextAttack and comboCount < maxCombo and isCurrentlyAttacking:
+        queueNextAttack = false
+        PerformAttack()
 
-	// Total time = animation length * combo count, with slight padding for reaction time
-	return (attackAnimTime * maxCombo) + 0.1f;
-}
 
-/// Executes the attack only if allowed by animation timing.
-private void PerformAttack()
-{
-	currentComboCount++;
-	lastAttackTime = Time.time; // Update last attack time
+// Core attack logic: advances the combo and plays animation
+function PerformAttack():
+    comboCount += 1
+    lastAttackTime = currentTime
 
-	if (anim != null)
-	{
-		if (!isInSpecialAttack)
-		{
-			anim.Play("BasicAttack", 0, 0f); // Restart the attack animation
-		}
-	}
-	else
-	{
-		SpawnHitbox(); // Animations not done yet, just spawn hitbox.
-	}
-}
+    if animationAvailable:
+        playAnimation("BasicAttack")
+    else:
+        spawnHitboxManually()
 
-/// Animation Event: Called near the end of animation to check for a combo.
-public void CheckCombo()
-{
-	if (canChainAttack && attackQueued && currentComboCount < maxCombo && isAttacking)
-	{
-		attackQueued = false; // Reset queue so it doesn't trigger twice
-		PerformAttack();
-	}
-	else if (currentComboCount >= maxCombo)
-	{
-		// Only now, after the full combo is complete, apply the buffer
-		lastAttackTime = Time.time; // Mark when the combo ended
-		ResetCombo();
-	}
-	else
-	{
-		ResetCombo(); // If combo is over, reset
-	}
-}
 
-private void ResetCombo()
-{
-	currentComboCount = 0;
-	canChainAttack = false;
-	attackQueued = false; // Make sure attack queue is cleared
-}
-```
+// Triggered near the end of an animation to check if a combo should continue
+function CheckCombo():
+    if canChain and queueNextAttack and comboCount < maxCombo:
+        queueNextAttack = false
+        PerformAttack()
+    else if comboCount >= maxCombo:
+        lastAttackTime = currentTime
+        ResetCombo()
+    else:
+        ResetCombo()
+
+
+// Resets the entire combo state
+function ResetCombo():
+    comboCount = 0
+    canChain = false
+    queueNextAttack = false
+
+<div style="flex: 1; min-width: 300px;">
+  <img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+  <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+</div>
+</div>
+
+The chain attack system allows players to execute combo attacks by timing button presses during specific animation windows. If the attack is input early, it queues until chaining is allowed. The system ensures responsive combat while preventing unintended inputs, using internal flags and timing buffers. Animation events control the chain window and reset logic after the combo ends. 
 
 ### Local Multiplayer Input
-![Input Setup](assets/goofy-lil-guys/input.gif)  
-Using Unity’s new Input System, I configured dynamic controller detection and split input between multiple players sharing the same screen. Each controller was linked to a specific player prefab.
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
+
+<div style="flex: 1; min-width: 300px;">
+In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unity UI system built to overcome the limitations of multiple players interacting with a single canvas.
+
+Players join in and are each assigned a UISelector — a floating cursor tied to their PlayerInput
+
+These selectors allow players to navigate independently across the character selection screen
+
+The screen is composed of three character cards, each with unique starters
+
+Because Unity's native UI systems struggle with differentiating multiple players on the same canvas, all navigation, submission, and cancel events are manually coded
+
+Each player’s inputs are routed to their selector, which sends feedback to the menu and updates visuals dynamically (e.g., color, shape, locked-in state)
+
+The system supports joining, backing out, and tutorial prompting, all fully synced across multiple players
+</div>
+
+<div style="flex: 1; min-width: 300px;">
+  <img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+  <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+</div>
+</div>
 
 ---
 
