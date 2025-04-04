@@ -21,7 +21,7 @@ title: Goofy Lil Guys
 I worked as a **Gameplay Programmer** on this project, responsible for core systems including:
 
 - Local multiplayer input using Unity’s Input System
-- ⚔Combat mechanics for 9 unique characters with special moves
+- Combat mechanics for 9 unique characters with special moves
 - Chain attack system to encourage team synergy
 - AI behavior for wild creatures with personalities and obstacle avoidance
 - Custom Unity editor tools for environment set-dressing (e.g., auto-grounding, sorters)
