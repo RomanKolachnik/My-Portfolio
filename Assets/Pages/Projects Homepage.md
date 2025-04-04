@@ -44,7 +44,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 ---
 
 ## Echoes of Continuity
-**2D Roguelike Dungeon-Crawler | Procedural | Combat Scaling| Solo-Developed**
+**2D Roguelike Dungeon-Crawler | Procedural | Combat Scaling | Solo-Developed**
 
 - Built a modular item system with stat-based effects and activation logic
 - Procedural dungeon generation with rulesets for structure placement
