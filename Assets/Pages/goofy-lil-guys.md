@@ -32,10 +32,7 @@ I worked as a **Gameplay Programmer** on this project, responsible for core syst
 ## Features I Developed
 
 ### Chain Attack System
-<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
-
-  <div style="flex: 1; min-width: 300px;">
-    <pre><code class="language-csharp">
+```csharp
 /// Called by PlayerController.cs when the player presses attack
 public void AttemptAttack()
 {
@@ -122,15 +119,7 @@ private void ResetCombo()
 	canChainAttack = false;
 	attackQueued = false; // Make sure attack queue is cleared
 }
-    </code></pre>
-  </div>
-
-  <div style="flex: 1; min-width: 300px;">
-    <img src="assets/goofy-lil-guys/chain-attack.gif" alt="Chain attack demo" style="max-width: 100%; border-radius: 8px;">
-    <p style="text-align: center;"><em>GIF: Chain attack mechanic in action</em></p>
-  </div>
-
-</div>
+```
 
 ### Local Multiplayer Input
 ![Input Setup](assets/goofy-lil-guys/input.gif)  
