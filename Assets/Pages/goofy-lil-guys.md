@@ -168,11 +168,56 @@ function AggroNearbyLilGuys():
 ---
 
 ### Editor Tools
-![Editor Tools](assets/goofy-lil-guys/editor-tool.png)  
-To help designers speed up level-building, I created tools to:
-- Auto-ground objects to terrain
-- Tag and sort props
-- Apply batch adjustments to collider settings
+Throughout development, I built a suite of custom editor tools to streamline the team’s workflow and level design process. These tools were created using Unity’s editor scripting API and were specifically tailored to solve recurring pain points.
+
+#### Auto-Ground Objects
+
+During level design, team members frequently had to hand-place and align environmental props on uneven terrain. This process was time-consuming and inconsistent. I built this tool to eliminate manual fine-tuning, enabling rapid, consistent scene dressing.
+
+This custom Unity Editor tool allows designers to automatically snap props and objects to terrain surfaces with a single click or mouse release in the scene view.
+
+**Features**
+
+- Automatically grounds selected objects to the surface beneath using raycasting
+- Includes optional random scale application within a defined range
+- Can spawn prefabs directly into the scene, ground them, and scale them on instantiation
+- Scene view integration: Automatically re-grounds objects when moved with the mouse
+- Alignment factor, which controlled how much the tool would try to align the object with the surface normal
+- Editor-safe: integrates Undo operations for safe rollbacks
+
+<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+
+#### Prop Sorter & Renamer
+
+With multiple designers working on scenes, object names and hierarchy order often became chaotic — making it difficult to find or group related props. This tool automates cleanup and ensures everything is labeled consistently across the board.
+
+This Unity Editor tool helps designers organize messy hierarchies by sorting and batch-renaming selected GameObjects in just a few clicks.
+
+**Features**
+
+- Sorts selected GameObjects by name or numerical suffix
+- Can reorder objects in the hierarchy (ascending or descending)
+- Renames selected GameObjects in a numbered format like Crate (1), Crate (2), etc.
+- Includes a clean Editor GUI for adjusting base names and triggering actions
+- Integrated with Unity’s Undo system and logging for safe operation
+
+<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+
+#### Custom Wall Collider
+
+We had multiple wall types that didn’t conform to box colliders or Unity’s built-in polygon collider options. Hand-building colliders was slow and error-prone, especially for curved or angled walls. I built this tool so our level designers could visually shape walls and have accurate colliders generated automatically.
+
+This tool dynamically builds polygon-based 3D mesh colliders for irregular or curved walls placed in the level, solving the problem of Unity’s limited primitive colliders when dealing with complex wall geometry.
+
+**Features**
+
+- Allows designers to define a custom-shaped base polygon using Transform points in the editor
+- Generates a 3D mesh collider by extruding the base shape vertically to the desired height
+- Mesh is automatically built, assigned to a MeshFilter (for visual feedback) and MeshCollider (for gameplay collision)
+- Includes in-editor Gizmos for live visual debugging of the collider structure
+- Handles fan triangulation, side wall extrusion, and accurate physics collision setup
 
 ---
 
