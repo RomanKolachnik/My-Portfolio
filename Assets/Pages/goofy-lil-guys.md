@@ -36,12 +36,100 @@ I worked as a **Gameplay Programmer** on this project, responsible for core syst
 
   <div style="flex: 1; min-width: 300px;">
     <pre><code class="language-csharp">
-// Chain attack activation
-if (Input.GetButtonDown("ChainAttack")) {
-    if (canChain) {
-        TriggerChainEffect();
-        comboCount++;
-    }
+/// <summary>
+/// Called by PlayerController.cs when the player presses attack
+/// </summary>
+public void AttemptAttack()
+{
+	if (IsInSpecialAttack || isDead || ((playerOwner != null) && !isAttacking)) return;
+
+	// If first attack in the combo, trigger immediately
+	if (currentComboCount == 0 && Time.time - lastAttackTime > comboBufferTime)
+	{
+		PerformAttack();
+	}
+	else if (currentComboCount > 0)
+	{
+		// Otherwise, queue attack to execute when animation allows it
+		attackQueued = true;
+	}
+}
+
+/// <summary>
+/// Animation Event: Called at the right frame to allow chaining.
+/// </summary>
+public void EnableChainAttack()
+{
+	canChainAttack = true;
+
+	// If attack is queued (player pressed attack within the window), continue the combo
+	if (attackQueued && currentComboCount < maxCombo && isAttacking)
+	{
+		attackQueued = false; // Clear the queue since we're attacking now
+		PerformAttack();
+	}
+}
+
+public float GetTotalComboTime()
+{
+	if (anim == null) return 0.5f; // Default safety buffer
+
+	// Get the length of the attack animation
+	float attackAnimTime = anim.GetCurrentAnimatorStateInfo(0).length;
+
+	// Total time = animation length * combo count, with slight padding for reaction time
+	return (attackAnimTime * maxCombo) + 0.1f;
+}
+
+
+/// <summary>
+/// Executes the attack only if allowed by animation timing.
+/// </summary>
+private void PerformAttack()
+{
+	currentComboCount++;
+	lastAttackTime = Time.time; // Update last attack time
+
+	if (anim != null)
+	{
+		if (!isInSpecialAttack)
+		{
+			anim.Play("BasicAttack", 0, 0f); // Restart the attack animation
+		}
+	}
+	else
+	{
+		SpawnHitbox(); // Animations not done yet, just spawn hitbox.
+	}
+}
+
+/// <summary>
+/// Animation Event: Called near the end of animation to check for a combo.
+/// </summary>
+public void CheckCombo()
+{
+	if (canChainAttack && attackQueued && currentComboCount < maxCombo && isAttacking)
+	{
+		attackQueued = false; // Reset queue so it doesn't trigger twice
+		PerformAttack();
+	}
+	else if (currentComboCount >= maxCombo)
+	{
+		// Only now, after the full combo is complete, apply the buffer
+		lastAttackTime = Time.time; // Mark when the combo ended
+		ResetCombo();
+	}
+	else
+	{
+		ResetCombo(); // If combo is over, reset
+	}
+}
+
+private void ResetCombo()
+{
+	currentComboCount = 0;
+	canChainAttack = false;
+	attackQueued = false; // Make sure attack queue is cleared
 }
     </code></pre>
   </div>
