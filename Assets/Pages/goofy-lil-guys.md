@@ -31,6 +31,25 @@ I worked as a **Gameplay Programmer** on this project, responsible for core syst
 
 ## Features I Developed
 
+### Chain Attack System
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
+
+  <div style="flex: 1; min-width: 300px;">
+  
+  ```csharp
+  // Chain attack activation
+  if (Input.GetButtonDown("ChainAttack"))
+  {
+      if (canChain)
+      {
+          TriggerChainEffect();
+          comboCount++;
+      }
+  }
+```
+</div> <div style="flex: 1; min-width: 300px;"> <img src="assets/goofy-lil-guys/chain-attack.gif" alt="Chain attack demo" style="max-width: 100%; border-radius: 8px;"> </div> </div>
+
+
 ### Local Multiplayer Input
 ![Input Setup](assets/goofy-lil-guys/input.gif)  
 Using Unity’s new Input System, I configured dynamic controller detection and split input between multiple players sharing the same screen. Each controller was linked to a specific player prefab.
