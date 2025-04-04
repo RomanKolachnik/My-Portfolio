@@ -11,6 +11,12 @@ title: Goofy Lil Guys
 
 ---
 
+## 🎥 Trailer / Gameplay Demo
+
+<iframe width="100%" height="400" src="https://video.fastly.steamstatic.com/store_trailers/257116853/movie480_vp9.webm?t=1742494208" frameborder="0" allowfullscreen></iframe>
+
+---
+
 ## My Role
 
 I worked as a **Gameplay Programmer** on this project, responsible for core systems including:
