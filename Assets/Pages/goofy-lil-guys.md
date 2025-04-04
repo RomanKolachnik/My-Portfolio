@@ -103,6 +103,7 @@ In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unit
 - Because Unity's native UI systems struggle with differentiating multiple players on the same canvas, all navigation, submission, and cancel events are manually coded
 - Each player’s inputs are routed to their selector, which sends feedback to the menu and updates visuals dynamically (e.g., color, shape, locked-in state)
 - The system supports joining, backing out, and tutorial prompting, all fully synced across multiple players
+
 ---
 
 ### AI Personalities
@@ -119,12 +120,14 @@ In Goofy Lil Guys, I built a personality-driven AI behavior system for the “wi
 <br><br>
 
 Below is a table of each personality trait and what it does:
+
 | Trait        | What It Affects |
 |--------------|-----------------|
 | Hostility    | Affects hostile behaviours such as attacking and chasing. Higher hostility can cause the enemy to their special attacks when in range |
 | Timidness    | Affects how likely the wild Lil Guy is to flee from battle when at low health. Higher timidness values means a higher health cap for the wild Lil Guy to decide fighting isn't worth it, and will try to flee instead. |
 | Intelligence | Affects how far ahead wild Lil Guys can predict player movements during chasing. Higher intelligence factors cause the Lil Guy to try and veer in front of the player's escape path, cutting them off. |
 | Charisma     | Decides whether their hostility can spread to nearby wild Lil Guys. The charisma factor also increases this aggro radius the higher the charisma modifier is. |
+
 Each trait is rolled between 0 and 10, with real-time behavioural changes tied to thresholds (ex. timid > 5 can flee, charisma > 5 will aggro others)
 
 Below are pseudocode examples of how these traits affect decision making:
