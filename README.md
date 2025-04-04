@@ -9,7 +9,7 @@ Passionate about responsive game mechanics, modular design, and player-centric e
 ## Tech Stack
 **Languages:** C# | Java | C++  
 **Engines:** Unity | Godot (beginner)  
-**Tools:** Git | GitHub | Visual Studio | Rider  
+**Tools:** Git | GitHub | Visual Studio  
 **Concepts:** Gameplay programming, multiplayer input, finite state machines, procedural generation, optimization
 
 ---
