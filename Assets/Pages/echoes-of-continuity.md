@@ -102,8 +102,3 @@ switch (currentState) {
 </div>
 
 ---
-
-## 🌐 Links
-
-- 🔗 [Play on Itch.io](https://romanxrt.itch.io/echoes-of-continuity)
-- 🔗 [Project Source (GitHub)](https://github.com/YOUR-REPO-HERE)
