@@ -22,7 +22,7 @@ Each project title links to a detailed page highlighting the systems I developed
 *2.5D Local Multiplayer Creature Collector | Team Size: ~10*
 
 - Built local multiplayer input system with controller support
-- Developed 9 unique combat styles and chain-attack mechanics
+- Developed 9 unique attacks and chain-attack mechanics
 - Wrote AI behaviors for wild creatures with personality modifiers
 
 [View Goofy Lil Guys on Steam](https://store.steampowered.com/app/3565690/Goofy_Lil_Guys/)
@@ -45,6 +45,6 @@ Each project title links to a detailed page highlighting the systems I developed
 
 - Built a modular item system with stat-based effects and activation logic
 - Procedural dungeon generation with rulesets for structure placement
-- Developed scaling difficulty over time and enemy FSMs for melee/ranged combat
+- Developed scaling difficulty over time and enemies using a composition design pattern
 
 [View Echoes of Continuity on itch.io](https://romanxrt.itch.io/echoes-of-continuity)
