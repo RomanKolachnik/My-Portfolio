@@ -171,7 +171,7 @@ function AggroNearbyLilGuys():
 ### Editor Tools
 Throughout development, I built a suite of custom editor tools to streamline the team’s workflow and level design process. These tools were created using Unity’s editor scripting API and were specifically tailored to solve recurring pain points.
 
-#### Auto-Ground Objects
+### Auto-Ground Objects
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/yiny_O5ZaME" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>Video: Preview of the autogrounding tool in action.</em></p>
@@ -189,7 +189,7 @@ This custom Unity Editor tool allows designers to automatically snap props and o
 - Alignment factor, which controlled how much the tool would try to align the object with the surface normal
 - Editor-safe: integrates Undo operations for safe rollbacks
 
-#### Prop Sorter & Renamer
+### Prop Sorter & Renamer
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/xSTAfeAkgUQ" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>Video: Preview of the object sorter and renamer in action.</em></p>
@@ -206,7 +206,7 @@ This Unity Editor tool helps designers organize messy hierarchies by sorting and
 - Includes a clean Editor GUI for adjusting base names and triggering actions
 - Integrated with Unity’s Undo system and logging for safe operation
 
-#### Custom Wall Collider
+### Custom Wall Collider
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/Akpm4P5F5wc" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>Video: Preview of the custom wall collider in action. The script connects the transform points, and generates triangles automatically based on winding order of the points and the height provided.</em></p>
