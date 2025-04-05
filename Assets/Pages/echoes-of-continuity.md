@@ -33,7 +33,7 @@ I developed **Echoes of Continuity** solo from the ground up, handling every asp
 
 ### Modular Item System (Stat-Scaling + Effects)
 
-<iframe width="100%" height="400" src="https://romankolachnik.github.io/My-Portfolio/Assets/Images/item-stacking.mp4" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/q00zKxUaq6E" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
 
 ```csharp
