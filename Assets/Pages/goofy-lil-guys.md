@@ -33,8 +33,8 @@ I worked as a **Gameplay Programmer** on this project, responsible for core syst
 
 ### Chain Attack System
 
-<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/7__FufAE2Lw" frameborder="0" allowfullscreen></iframe>
+<p style="text-align: center;"><em>Video: Preview of the chain attack system. Lil Guys can chain attack in quick succession, but will have a pause between chained attacks.</em></p>
 
 ```csharp
 // Called when the player presses the attack button
@@ -92,7 +92,7 @@ The chain attack system allows players to execute combo attacks by timing button
 ---
 
 ### Local Multiplayer Input
-<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/7lj4DpSr96A" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
 In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unity UI system built to overcome the limitations of multiple players interacting with a single canvas.
 <br><br>
