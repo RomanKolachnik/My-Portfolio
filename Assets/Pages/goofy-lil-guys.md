@@ -107,8 +107,9 @@ In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unit
 ---
 
 ### AI Personalities
-<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/c5eAsGhyp98" frameborder="0" allowfullscreen></iframe>
+<p style="text-align: center;"><em>Video: Preview of Player-AI interaction. State transitions, and usage of special attacks are shown.</em></p>
+
 In Goofy Lil Guys, I built a personality-driven AI behavior system for the “wild” creatures in the world. These AI-controlled Lil Guys make decisions based on randomly rolled traits (like timidness, intelligence, and charisma) that govern how they interact with players and the environment.
 <br><br>
 
@@ -172,6 +173,9 @@ Throughout development, I built a suite of custom editor tools to streamline the
 
 #### Auto-Ground Objects
 
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/yiny_O5ZaME" frameborder="0" allowfullscreen></iframe>
+<p style="text-align: center;"><em>Video: Preview of the autogrounding tool in action.</em></p>
+
 During level design, team members frequently had to hand-place and align environmental props on uneven terrain. This process was time-consuming and inconsistent. I built this tool to eliminate manual fine-tuning, enabling rapid, consistent scene dressing.
 
 This custom Unity Editor tool allows designers to automatically snap props and objects to terrain surfaces with a single click or mouse release in the scene view.
@@ -185,10 +189,10 @@ This custom Unity Editor tool allows designers to automatically snap props and o
 - Alignment factor, which controlled how much the tool would try to align the object with the surface normal
 - Editor-safe: integrates Undo operations for safe rollbacks
 
-<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
-
 #### Prop Sorter & Renamer
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/xSTAfeAkgUQ" frameborder="0" allowfullscreen></iframe>
+<p style="text-align: center;"><em>Video: Preview of the object sorter and renamer in action.</em></p>
 
 With multiple designers working on scenes, object names and hierarchy order often became chaotic — making it difficult to find or group related props. This tool automates cleanup and ensures everything is labeled consistently across the board.
 
@@ -202,10 +206,10 @@ This Unity Editor tool helps designers organize messy hierarchies by sorting and
 - Includes a clean Editor GUI for adjusting base names and triggering actions
 - Integrated with Unity’s Undo system and logging for safe operation
 
-<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
-
 #### Custom Wall Collider
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/Akpm4P5F5wc" frameborder="0" allowfullscreen></iframe>
+<p style="text-align: center;"><em>Video: Preview of the custom wall collider in action. The script connects the transform points, and generates triangles automatically based on winding order of the points and the height provided.</em></p>
 
 We had multiple wall types that didn’t conform to box colliders or Unity’s built-in polygon collider options. Hand-building colliders was slow and error-prone, especially for curved or angled walls. I built this tool so our level designers could visually shape walls and have accurate colliders generated automatically.
 
@@ -218,9 +222,6 @@ This tool dynamically builds polygon-based 3D mesh colliders for irregular or cu
 - Mesh is automatically built, assigned to a MeshFilter (for visual feedback) and MeshCollider (for gameplay collision)
 - Includes in-editor Gizmos for live visual debugging of the collider structure
 - Handles fan triangulation, side wall extrusion, and accurate physics collision setup
-
-<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
 
 ---
 
