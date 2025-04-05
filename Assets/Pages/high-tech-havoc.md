@@ -32,6 +32,28 @@ I worked as a **Gameplay Programmer** on High-Tech Havoc, with responsibilities 
 
 ### Modular Power-Up Synergy System
 
+High-Tech Havoc features a modular modifier system where each power-up is self-contained, stackable, and independently handles its own logic. I implemented all 9 modifiers in the game and they are as follows:
+| Modifier | What It Does |
+|----------|--------------|
+| Overcharged | Increased player movement speed and roll speed (which let you get temporary buffs faster |
+| You're Going Down With Me | You can self-destruct and defeat any players in your range instantly. Their deaths count before your own (so you don't auto-lose the round) |
+| Power Saving Mode | The amount of energy you consume to dash or roll for a temporary buff is cut in half |
+| Unstable Blast | Your bullets explode on impact with the environment and over time |
+| Trifecta | You can shoot 3 bullets instead of 1 bullet |
+| Overheated | Your bullets can cause players to get burned, taking nonlethal damage overtime |
+| Homing Bullet | Your bullets home in on the closest target to you |
+| Fragmentation | Your bullets will fragment off of the environment and split into smaller bullets |
+
+The modifiers were built using a base Modifier class (ScriptableObject) pattern and overrides methods to apply/remove effects on the player. Their effects are self-contained and require no central dependency, and the modifiers stack in real time, enabling emergent combinations, and apply via a priority.
+
+For example, A player equipped with Homing Bullet, Unstable Blast, and Fragmentation will fire a projectile that:
+
+1. Homes in on the nearest target
+2. Explodes on impact or after a short delay
+3. Fragments into multiple bullets
+4. And each of those also home and explode
+
+This synergy system was deliberately modular — each modifier affects only its relevant component (movement, bullets, player stats) — which keeps the system scalable and easy to expand upon.
 
 ---
 
