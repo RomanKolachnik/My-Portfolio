@@ -35,7 +35,7 @@ I worked as a **Gameplay Programmer** on High-Tech Havoc, with responsibilities 
 High-Tech Havoc features a modular modifier system where each power-up is self-contained, stackable, and independently handles its own logic. I implemented all 9 modifiers in the game and they are as follows:
 | Modifier | What It Does |
 |----------|--------------|
-| Overcharged | Increased player movement speed and roll speed (which let you get temporary buffs faster |
+| Overcharged | Increased player movement speed and roll speed (which let you get temporary buffs faster) |
 | You're Going Down With Me | You can self-destruct and defeat any players in your range instantly. Their deaths count before your own (so you don't auto-lose the round) |
 | Power Saving Mode | The amount of energy you consume to dash or roll for a temporary buff is cut in half |
 | Unstable Blast | Your bullets explode on impact with the environment and over time |
