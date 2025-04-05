@@ -33,7 +33,7 @@ I developed **Echoes of Continuity** solo from the ground up, handling every asp
 
 ### Modular Item System (Stat-Scaling + Effects)
 
-<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<iframe width="100%" height="400" src="https://romankolachnik.github.io/My-Portfolio/Assets/Images/item-stacking.mp4" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
 
 ```csharp
@@ -66,7 +66,7 @@ Echoes of Continuity features a fully modular, event-driven item system using Sc
 
 ### Procedural Dungeon Generation
 
-<img src="assets/echoes-of-continuity/dungeon-gen.gif" alt="Dungeon generation demo" style="max-width: 100%; border-radius: 8px;">
+<iframe width="100%" height="400" src="https://romankolachnik.github.io/My-Portfolio/Assets/Images/dungeon-maker.mp4" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>GIF: Procedural dungeon layout forming with rules applied</em></p>
 
 ```csharp
