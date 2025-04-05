@@ -36,6 +36,7 @@ I worked as a **Gameplay Programmer** on High-Tech Havoc, with responsibilities 
 <p style="text-align: center;"><em>GIF: Player with multiple stacked modifiers.</em></p>
 
 High-Tech Havoc features a modular modifier system where each power-up is self-contained, stackable, and independently handles its own logic. I implemented all 9 modifiers in the game and they are as follows:
+
 | Modifier | What It Does |
 |----------|--------------|
 | Overcharged | Increased player movement speed and roll speed (which let you get temporary buffs faster) |
