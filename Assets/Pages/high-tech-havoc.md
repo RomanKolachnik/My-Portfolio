@@ -32,6 +32,9 @@ I worked as a **Gameplay Programmer** on High-Tech Havoc, with responsibilities 
 
 ### Modular Power-Up Synergy System
 
+<img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
+<p style="text-align: center;"><em>GIF: Player with multiple stacked modifiers.</em></p>
+
 High-Tech Havoc features a modular modifier system where each power-up is self-contained, stackable, and independently handles its own logic. I implemented all 9 modifiers in the game and they are as follows:
 | Modifier | What It Does |
 |----------|--------------|
@@ -60,7 +63,7 @@ This synergy system was deliberately modular — each modifier affects only its 
 ### Stage Lighting Event Triggers
 
 <img src="assets/echoes-of-continuity/item-effect.gif" alt="Item effect demo" style="max-width: 100%; border-radius: 8px;">
-<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+<p style="text-align: center;"><em>GIF: Stage lighting during regular gameplay and during stage events.</em></p>
 
 ```csharp
 // On game start
