@@ -21,7 +21,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 
 ---
 
-## [High Tech Havoc](./high-tech-havoc.md)
+## [High-Tech Havoc](./high-tech-havoc.md)
 **3D Arena Shooter | Fast-paced Local Multiplayer | Synergistic Power-Ups | Team Size: ~10**
 
 - Connected controller inputs to specific player bodies
