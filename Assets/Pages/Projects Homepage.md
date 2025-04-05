@@ -37,7 +37,7 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 
 - Built a modular item system with stat-based effects and activation logic
 - Procedural dungeon generation with rulesets for structure placement
-- Developed scaling difficulty over time and enemy FSMs for melee/ranged combat  
+- Developed scaling difficulty over time and enemies using the composition design pattern
 
 [Play on Itch.io](https://romanxrt.itch.io/echoes-of-continuity)
 
