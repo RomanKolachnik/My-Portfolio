@@ -114,8 +114,8 @@ Echoes of Continuity features a procedural dungeon generator built using cellula
 
 ### Modular Enemy AI System
 
-<img src="assets/echoes-of-continuity/enemy-ai.gif" alt="Enemy FSM AI demo" style="max-width: 100%; border-radius: 8px;">
-<p style="text-align: center;"><em>GIF: Ranged enemy switching between idle and attack states</em></p>
+<iframe width="100%" height="400" src="https://romankolachnik.github.io/My-Portfolio/Assets/Images/enemy-comp.mp4" frameborder="0" allowfullscreen></iframe>
+<p style="text-align: center;"><em>Video: Qasmine Alpha switching into ranged attack.</em></p>
 
 ```csharp
 // Base Enemy Logic
