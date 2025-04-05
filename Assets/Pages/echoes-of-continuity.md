@@ -5,7 +5,7 @@ title: Echoes of Continuity
 
 # Echoes of Continuity
 
-> *2D Roguelike Dungeon-Crawler • Solo Developed • Unity (C#) • Released on itch.io*
+> *2D Roguelike Dungeon-Crawler • Unity (C#) • Solo Developed • Released on itch.io*
 
 ![Banner](https://img.itch.zone/aW1nLzE2MDI1OTU2LnBuZw==/original/soks8r.png)
 
@@ -19,13 +19,13 @@ title: Echoes of Continuity
 
 ## My Role
 
-I developed **Echoes of Continuity** solo from the ground up, handling every aspect of gameplay programming, including:
+I developed **Echoes of Continuity** solo from the ground up, handling every aspect of its development, including art, music, sound and overall design. Gameplay implementations I've done include:
 
 - Built a modular item system with interface-based stat scaling, activation effects, and synergy logic
-- Designed character abilities that scale based on stat types (e.g., Strength, Wisdom)
+- Designed character abilities that scale based on stat types (e.g., Strength, Luck, Crit Chance)
 - Implemented procedural dungeon generation with structure spawn rules and tile conditions
-- Developed time-based difficulty scaling for both enemy stats and level generation
-- Designed finite state machine (FSM) AI for melee and ranged enemy behaviors
+- Developed time-based difficulty scaling for enemy stats
+- Designed enemies using a composition design pattern
 
 ---
 
