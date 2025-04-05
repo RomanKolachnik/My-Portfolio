@@ -24,7 +24,7 @@ I worked as a **Gameplay Programmer** on High-Tech Havoc, with responsibilities 
 - Implemented local multiplayer setup using Unity’s Input System
 - Developed modular power-up system with synergy logic and activation priority
 - Designed stage event interactions like dynamic lighting that reacts to game triggers
-- Contributed to debugging across core systems like UI and enemy logic
+- Contributed to debugging across core systems like UI and stage event logic
 
 ---
 
@@ -86,11 +86,11 @@ function Update():
     scrollTextureOffset() // Creates movement across lights
 ```
 
-This system dynamically shifts stage lighting based on a global “Chaos Factor.” When the chaos is inactive, materials smoothly cycle through hues like a party light. But when chaos is triggered, the lighting transitions to a full red alert state — then blinks with a rhythmic pulse using Mathf.Cos to simulate intensity shifts.
+This system dynamically shifts stage lighting based on a global “Chaos Factor”, which was a stage event the game announcer would call forth periodically during gameplay. When the Chaos Factor is inactive, materials smoothly cycle through hues like a party light. But when a Chaos Factor is triggered, the lighting transitions to a full red alert state — then blinks with a rhythmic pulse using Mathf.Cos to simulate intensity shifts.
 
-- All materials are manually set to emit color (Unity’s _EmissionColor)
+- All materials are manually set to emit colour (Unity’s _EmissionColor)
 - During normal gameplay, the hue value rotates over time, creating a smooth rainbow gradient
-- When chaos is triggered, the system interpolates the current color toward red
+- When a Chaos Factor is triggered, the system interpolates the current colour toward red
 - Once fully red, the lights begin a sinusoidal blinking effect based on time
 - The strip lights also scroll horizontally for added visual energy
 
