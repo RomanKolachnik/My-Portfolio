@@ -52,7 +52,6 @@ class ItemInfo (ScriptableObject):
     function OnHit(playerStats, enemyStats)
     function OnPassive(playerStats)
     function OnDamaged(playerStats)
-    ...
 ```
 
 Echoes of Continuity features a fully modular, event-driven item system using ScriptableObjects. Each item defines both passive stat buffs and custom trigger-based effects (e.g., on-kill, on-hit, on-shoot). Items are scalable, stackable, and plug directly into the game loop with minimal coupling.
@@ -63,12 +62,10 @@ Echoes of Continuity features a fully modular, event-driven item system using Sc
 - Items can scale based on stack count, and spawn in from enemy deaths based on their rarity
 - Effects apply to the player who owns the item, enabling unique builds and synergy
 
-
 ---
 
 ### Procedural Dungeon Generation
 
-<div style="flex: 1; min-width: 300px;">
 <img src="assets/echoes-of-continuity/dungeon-gen.gif" alt="Dungeon generation demo" style="max-width: 100%; border-radius: 8px;">
 <p style="text-align: center;"><em>GIF: Procedural dungeon layout forming with rules applied</em></p>
 
@@ -117,7 +114,6 @@ Echoes of Continuity features a procedural dungeon generator built using cellula
 
 ### Modular Enemy AI System
 
-<div style="flex: 1; min-width: 300px;">
 <img src="assets/echoes-of-continuity/enemy-ai.gif" alt="Enemy FSM AI demo" style="max-width: 100%; border-radius: 8px;">
 <p style="text-align: center;"><em>GIF: Ranged enemy switching between idle and attack states</em></p>
 
