@@ -87,7 +87,7 @@ function ResetCombo():
     queueNextAttack = false
 ```
 
-The chain attack system allows players to execute combo attacks by timing button presses during specific animation windows. If the attack is input early, it queues until chaining is allowed. The system ensures responsive combat while preventing unintended inputs, using internal flags and timing buffers. Animation events control the chain window and reset logic after the combo ends. 
+The chain attack system allows players to execute combo attacks by timing button presses during specific animation windows. If the attack is input early, it queues until chaining is allowed. The system ensures responsive combat while preventing unintended inputs, using internal flags and timing buffers. Animation events control the chain window and reset logic after the combo ends. This was designed to vary each character even more, with some characters being able to chain more attacks together than others, and also help mitigate the issue of mashing the attack button. Because there's a window in the chain attack where you can't attack, it makes the player strategize their spacing with enemies more, since there's more time when they're vulnerable than just having no chain attack window at all.
 
 ---
 
@@ -176,7 +176,7 @@ Throughout development, I built a suite of custom editor tools to streamline the
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/yiny_O5ZaME" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>Video: Preview of the autogrounding tool in action.</em></p>
 
-During level design, team members frequently had to hand-place and align environmental props on uneven terrain. This process was time-consuming and inconsistent. I built this tool to eliminate manual fine-tuning, enabling rapid, consistent scene dressing.
+During level design, team members frequently had to hand-place and align environmental props on uneven terrain. This process was time-consuming and inconsistent, as sometimes it was really hard to tell if an object was actually attached to the grounf or if it was floating slightly. I built this tool to eliminate manual fine-tuning, enabling rapid, consistent scene dressing.
 
 This custom Unity Editor tool allows designers to automatically snap props and objects to terrain surfaces with a single click or mouse release in the scene view.
 
@@ -211,7 +211,7 @@ This Unity Editor tool helps designers organize messy hierarchies by sorting and
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/Akpm4P5F5wc" frameborder="0" allowfullscreen></iframe>
 <p style="text-align: center;"><em>Video: Preview of the custom wall collider in action. The script connects the transform points, and generates triangles automatically based on winding order of the points and the height provided.</em></p>
 
-We had multiple wall types that didn’t conform to box colliders or Unity’s built-in polygon collider options. Hand-building colliders was slow and error-prone, especially for curved or angled walls. I built this tool so our level designers could visually shape walls and have accurate colliders generated automatically.
+We had multiple organically shaped zones that we didn't want the players or enemies to be able to traverse into. Because of the odd shapes, using primitive colliders such as box colliders wouldn't work due to the rounded corners and Unity’s built-in polygon collider options wouldn't work since it was 2-dimensional in nature and we were working in a 3D game environment. Hand-building colliders was slow and error-prone, especially for curved or angled walls. I built this tool so our level designers could visually shape walls and have accurate colliders generated automatically.
 
 This tool dynamically builds polygon-based 3D mesh colliders for irregular or curved walls placed in the level, solving the problem of Unity’s limited primitive colliders when dealing with complex wall geometry.
 
