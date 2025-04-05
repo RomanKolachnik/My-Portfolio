@@ -93,7 +93,7 @@ The chain attack system allows players to execute combo attacks by timing button
 
 ### Local Multiplayer Input
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/7lj4DpSr96A" frameborder="0" allowfullscreen></iframe>
-<p style="text-align: center;"><em>GIF: Player activating an item with on-kill effects</em></p>
+<p style="text-align: center;"><em>Video: Players navigating the same UI menu through the use of custom cursors.</em></p>
 In Goofy Lil Guys, the character select screen is a fully custom, hardcoded Unity UI system built to overcome the limitations of multiple players interacting with a single canvas.
 <br><br>
 
