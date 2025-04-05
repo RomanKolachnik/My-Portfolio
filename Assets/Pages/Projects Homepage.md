@@ -32,17 +32,6 @@ Welcome to my gameplay programming portfolio! Below are some of the projects I'v
 
 ---
 
-## [House of Cards](./house-of-cards.md)
-**2D Puzzle Platformer | Card Mechanics + Grapple | Team Size: ~10**
-
-- Designed modular card system with power-ups and activation effects
-- Implemented grapple physics, state-switcher movement, and pivot-based puzzles
-- Assisted with player collider adjustments for platforming precision  
-
-[Play on Itch.io](https://steveohbyte.itch.io/house-of-cards)
-
----
-
 ## [Echoes of Continuity](./echoes-of-continuity.md)
 **2D Roguelike Dungeon-Crawler | Procedural | Combat Scaling | Solo-Developed**
 
